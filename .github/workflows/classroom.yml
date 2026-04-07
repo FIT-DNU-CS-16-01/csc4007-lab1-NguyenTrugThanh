@@ -1,0 +1,70 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Core files
+      id: core-files
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Core files
+        setup-command: chmod +x grader/*.sh
+        command: bash grader/check_core_files.sh
+        timeout: 5
+        max-score: 3
+    - name: Source folder
+      id: source-folder
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Source folder
+        setup-command: chmod +x grader/*.sh
+        command: bash grader/check_src.sh
+        timeout: 2
+        max-score: 1
+    - name: Datacard folder
+      id: datacard-folder
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Datacard folder
+        setup-command: chmod +x grader/*.sh
+        command: bash grader/check_datacard_dir.sh
+        timeout: 2
+        max-score: 1
+    - name: Datacard files
+      id: datacard-files
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Datacard files
+        setup-command: chmod +x grader/*.sh
+        command: bash grader/check_datacard_files.sh
+        timeout: 2
+        max-score: 1
+    - name: Top-level data card
+      id: top-level-data-card
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Top-level data card
+        setup-command: chmod +x grader/*.sh
+        command: bash grader/check_top_level_datacard.sh
+        timeout: 1
+        max-score: 1
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        CORE-FILES_RESULTS: "${{steps.core-files.outputs.result}}"
+        SOURCE-FOLDER_RESULTS: "${{steps.source-folder.outputs.result}}"
+        DATACARD-FOLDER_RESULTS: "${{steps.datacard-folder.outputs.result}}"
+        DATACARD-FILES_RESULTS: "${{steps.datacard-files.outputs.result}}"
+        TOP-LEVEL-DATA-CARD_RESULTS: "${{steps.top-level-data-card.outputs.result}}"
+      with:
+        runners: core-files,source-folder,datacard-folder,datacard-files,top-level-data-card
