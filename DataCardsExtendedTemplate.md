@@ -1,197 +1,119 @@
-# Dataset Name (Acronym)
+# IMDB Review Dataset (as introduced in Maas et al., 2011)
+
+> **Scope note:** This data card is filled **only from information stated in the paper**
+> “Learning Word Vectors for Sentiment Analysis” (ACL 2011) and the dataset URL given in the paper.
+> Whenever the paper does not provide enough detail, the field is marked **Not specified in the paper**.
+
 Write a short summary describing your dataset (limit
 200 words). Include information about the content
 and topic of the data, sources and motivations for the
 dataset, benefits and the problems or use cases it is
 suitable for.
 
+The paper introduces a publicly released **IMDB movie review dataset** for sentiment analysis. The dataset contains **50,000 movie reviews** collected from IMDB, with an **even number of positive and negative reviews**. To focus on clear polarity classification, the dataset includes only **highly polarized reviews**: reviews with score **≤ 4/10** are labeled negative, and reviews with score **≥ 7/10** are labeled positive; **neutral reviews are excluded**. The dataset is evenly split into **25,000 training** and **25,000 test** reviews, and uses **disjoint sets of movies** for training and testing to reduce leakage from movie-specific words and repeated content patterns. The dataset was introduced as a **more robust benchmark** than smaller prior sentiment datasets and is suitable for **research on sentiment classification, benchmark evaluation, and sentiment-aware representation learning**.
+
 #### Dataset Link
-<!-- info: Provide a link to the dataset: -->
-<!-- width: half -->
-Dataset Link
+- Dataset page: http://www.andrew-maas.net/data/sentiment
+- Paper: https://aclanthology.org/P11-1015.pdf
 
 #### Data Card Author(s)
-<!-- info: Select **one role per** Data Card Author:
-
-(Usage Note: Select the most appropriate choice to describe the author's role
-in creating the Data Card.) -->
-<!-- width: half -->
-- **Name, Team:** (Owner / Contributor / Manager)
-- **Name, Team:** (Owner / Contributor / Manager)
-- **Name, Team:** (Owner / Contributor / Manager)
+- **Andrew L. Maas et al., Stanford University:** (Owner; proxy based on dataset/paper authors, since the paper does not name separate data card authors)
 
 ## Authorship
 ### Publishers
 #### Publishing Organization(s)
-<!-- scope: telescope -->
-<!-- info: Provide the names of the institution or organization responsible
-for publishing the dataset: -->
-Organization Name
+- Stanford University
 
 #### Industry Type(s)
-<!-- scope: periscope -->
-<!-- info: Select **all applicable** industry types to which the publishing
-organizations belong: -->
-- Corporate - Tech
-- Corporate - Non-Tech (please specify)
 - Academic - Tech
-- Academic - Non-Tech (please specify)
-- Not-for-profit - Tech
-- Not-for-profit - Non-Tech (please specify)
-- Individual (please specify)
-- Others (please specify)
 
 #### Contact Detail(s)
-<!-- scope: microscope -->
-<!-- info: Provide publisher contact details: -->
-- **Publishing POC:** Provide the name for a POC for this dataset's publishers
-- **Affiliation:** Provide the POC's institutional affiliation
-- **Contact:** Provide the POC's contact details
-- **Mailing List:** Provide a mailing list if available
-- **Website:** Provide a website for the dataset if available
+- **Publishing POC:** Andrew L. Maas et al. (exact POC not designated in the paper)
+- **Affiliation:** Stanford University
+- **Contact:** [amaas, rdaly, ptpham, yuze, ang, cgpotts]@stanford.edu
+- **Mailing List:** Not specified in the paper
+- **Website:** http://www.andrew-maas.net/data/sentiment
 
 ### Dataset Owners
 #### Team(s)
-<!-- scope: telescope -->
-<!-- info: Provide the names of the groups or team(s) that own the dataset: -->
-Name of Group or Team
+- Stanford University research team (exact lab/group name not specified in the paper)
 
 #### Contact Detail(s)
-<!-- scope: periscope -->
-<!-- info: Provide pathways to contact dataset owners: -->
-- **Dataset Owner(s):** Provide the names of the dataset owners
-- **Affiliation:** Provide the affiliation of the dataset owners
-- **Contact:** Provide the email of the dataset owner
-- **Group Email:** Provide a link to the mailing-list@server.com for the dataset owner team
-- **Website:** Provide a link to the website for the dataset owner team
+- **Dataset Owner(s):** Andrew L. Maas; Raymond E. Daly; Peter T. Pham; Dan Huang; Andrew Y. Ng; Christopher Potts
+- **Affiliation:** Stanford University
+- **Contact:** [amaas, rdaly, ptpham, yuze, ang, cgpotts]@stanford.edu
+- **Group Email:** Not specified in the paper
+- **Website:** http://www.andrew-maas.net/data/sentiment
 
 #### Author(s)
-<!-- scope: microscope -->
-<!-- info: Provide the details of all authors associated with the dataset:
-
-(Usage Note: Provide the affiliation and year if different from publishing
-institutions or multiple affiliations.) -->
-- Name, Title, Affiliation, YYYY
-- Name, Title, Affiliation, YYYY
-- Name, Title, Affiliation, YYYY
-- Name, Title, Affiliation, YYYY
+- Andrew L. Maas, Author, Stanford University, 2011
+- Raymond E. Daly, Author, Stanford University, 2011
+- Peter T. Pham, Author, Stanford University, 2011
+- Dan Huang, Author, Stanford University, 2011
+- Andrew Y. Ng, Author, Stanford University, 2011
+- Christopher Potts, Author, Stanford University, 2011
 
 ### Funding Sources
 #### Institution(s)
-<!-- scope: telescope -->
-<!-- info: Provide the names of the funding institution(s): -->
-- Name of Institution
-- Name of Institution
-- Name of Institution
+- DARPA Deep Learning program
+- National Science Foundation (NSF)
+- Office of Naval Research (ONR)
 
 #### Funding or Grant Summary(ies)
-<!-- scope: periscope -->
-<!-- width: full -->
-<!-- info: Provide a short summary of programs or projects that may have funded
-the creation, collection, or curation of the dataset.
+This work is reported as supported by the **DARPA Deep Learning program** under contract **FA8650-10-C-7020**, an **NSF Graduate Fellowship** awarded to Andrew L. Maas, and **ONR grant No. N00014-10-1-0109** to Christopher Potts.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-*For example, Institution 1 and institution 2 jointly funded this dataset as a
-part of the XYZ data program, funded by XYZ grant awarded by institution 3 for
-the years YYYY-YYYY.*
-
-Summarize here. Link to documents if available.
-
-**Additional Notes:** Add here
+**Additional Notes:** Funding is stated in the paper acknowledgments.
 
 ## Dataset Overview
 #### Data Subject(s)
-<!-- scope: telescope -->
-<!-- info: Select ***all applicable**** subjects contained the dataset: -->
-- Sensitive Data about people
 - Non-Sensitive Data about people
-- Data about natural phenomena
-- Data about places and objects
-- Synthetically generated data
-- Data about systems or products and their behaviors
-- Unknown
-- Others (Please specify)
+- Others: Publicly available user-written movie reviews and rating-derived sentiment labels
 
 #### Dataset Snapshot
-<!-- scope: periscope -->
-<!-- info: Provide a snapshot of the dataset:<br><br>(Use the additional notes
-to include relevant information, considerations, and links to table(s) with
-more detailed breakdowns.) -->
 Category | Data
 --- | ---
-Size of Dataset | 123456 MB
-Number of Instances | 123456
-Number of Fields | 123456
-Labeled Classes | 123456
-Number of Labels | 123456789
-Average Labeles Per Instance | 123456
-Algorithmic Labels | 123456789
-Human Labels | 123456789
-Other Characteristics | 123456
+Size of Dataset | Not specified in the paper
+Number of Instances | 50,000 reviews
+Number of Fields | Not specified in the paper
+Labeled Classes | 2 (positive, negative)
+Number of Labels | 50,000 binary sentiment labels (1 per review)
+Average Labeles Per Instance | 1
+Algorithmic Labels | Binary polarity labels derived by thresholding IMDB scores
+Human Labels | Original IMDB review scores / ratings supplied by reviewers
+Other Characteristics | Class-balanced; max 30 reviews per movie; neutral reviews excluded; train/test use disjoint movie sets
 
-**Above:** Provide a caption for the above table of visualization.
+**Above:** Snapshot of the IMDB review benchmark dataset introduced in the paper.
 
-**Additional Notes:** Add here.
+**Additional Notes:** The paper also mentions using 25,000 labeled IMDB reviews for learning word representations, and a variant using 50,000 additional unlabeled reviews.
 
 #### Content Description
-<!-- scope: microscope -->
-<!-- info: Provide a short description of the content in a data point: -->
-Summarize here. Include links if available.
+Each instance is a **movie review text** from IMDB paired with a **binary sentiment polarity label**. The dataset is intended for document-level sentiment classification. Labels are based on IMDB review scores: **negative if score ≤ 4/10**, **positive if score ≥ 7/10**. Neutral reviews are excluded.
 
-**Additional Notes:** Add here.
+**Additional Notes:** The paper does not enumerate the exact serialized fields of the released files.
 
 #### Descriptive Statistics
-<!-- width: full -->
-<!-- info: Provide basic descriptive statistics for each field.
+Statistic | Field Name | Field Name | Field Name
+--- | --- | --- | ---
+count | Not specified | Not specified | Not specified
+mean | Not specified | Not specified | Not specified
+std | Not specified | Not specified | Not specified
+min | Not specified | Not specified | Not specified
+25% | Not specified | Not specified | Not specified
+50% | Not specified | Not specified | Not specified
+75% | Not specified | Not specified | Not specified
+max | Not specified | Not specified | Not specified
+mode | Not specified | Not specified | Not specified
 
-Use additional notes to capture any other relevant information or
-considerations.
+**Above:** Detailed descriptive statistics are not reported in the paper.
 
-Usage Note: Some statistics will be relevant for numeric data, for not for
-strings. -->
-
-Statistic | Field Name | Field Name | Field Name | Field Name | Field Name | Field Name
---- | --- | --- | --- | --- | --- | ---
-count |
-mean |
-std |
-min |
-25% |
-50% |
-75% |
-max |
-mode |
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here.
+**Additional Notes:** Only aggregate dataset-level characteristics are stated.
 
 ### Sensitivity of Data
 #### Sensitivity Type(s)
-<!-- scope: telescope -->
-<!-- info: Select ***all applicable*** data types present in the dataset: -->
 - User Content
-- User Metadata
-- User Activity Data
-- Identifiable Data
-- S/PII
-- Business Data
-- Employee Data
-- Pseudonymous Data
-- Anonymous Data
-- Health Data
-- Children’s Data
-- None
-- Others (Please specify)
+- Others: The paper does not specify whether usernames, account identifiers, or metadata are included in the released files
 
 #### Field(s) with Sensitive Data
-<!-- scope: periscope -->
-<!-- info: List fields in the dataset that contain S/PII, and specify if their
-collection was intentional or unintentional.
-
-Use additional notes to capture any other relevant information or
-considerations. -->
 **Intentional Collected Sensitive Data**
 
 (S/PII were collected as a part of the
@@ -199,9 +121,7 @@ dataset creation process.)
 
 Field Name | Description
 --- | ---
-Field Name | Type of S/PII
-Field Name | Type of S/PII
-Field Name | Type of S/PII
+None reported | The paper does not describe collection of direct identifiers or sensitive personal attributes
 
 **Unintentionally Collected Sensitive Data**
 
@@ -212,604 +132,284 @@ methods.)
 
 Field Name | Description
 --- | ---
-Field Name | Type of S/PII
-Field Name | Type of S/PII
-Field Name | Type of S/PII
+Review text | Free-form user text could potentially contain incidental personal information, but this is not discussed in the paper
 
-**Additional Notes:** Add here
+**Additional Notes:** Privacy handling is not described in the paper.
 
 #### Security and Privacy Handling
-<!-- scope: microscope -->
-<!-- info: Summarize the measures or steps to handle sensitive data in this
-dataset.
+The paper does not report specific privacy filtering, redaction, anonymization, or access-control procedures for the released dataset.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
+**Method:** Not specified in the paper
 
-Summarize here. Include links and metrics where applicable.
-
-**Method:** description
-
-**Method:** description
-
-**Method:** description
-
-**Additional Notes:** Add here
+**Additional Notes:** Because the dataset consists of public user-generated text, downstream users should review privacy considerations independently.
 
 #### Risk Type(s)
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** risk types presenting from the
-dataset: -->
-- Direct Risk
-- Indirect Risk
-- Residual Risk
-- No Known Risks
-- Others (Please Specify)
+- Not specified in the paper
 
 #### Supplemental Link(s)
-<!-- scope: periscope -->
-<!-- info: Provide link(s) for documentation pertaining to sensitive data in
-the dataset: -->
-**Link Name or Document Type:** link
+**Dataset Page:** http://www.andrew-maas.net/data/sentiment
 
-**Link Name or Document Type:** link
-
-**Link Name or Document Type:** link
+**Paper:** https://aclanthology.org/P11-1015.pdf
 
 #### Risk(s) and Mitigation(s)
-<!-- scope: microscope -->
-<!-- info: Summarize the steps taken to identify and mitigate risks from PII
-or sensitive information.
+The paper does not provide a formal risk analysis. A likely residual risk is that some free-text reviews may contain incidental personal information or platform-specific artifacts. The paper’s main documented mitigation is **benchmark design** rather than privacy design: using **disjoint sets of movies** for training and testing to reduce leakage from movie-specific correlations.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links and metrics where applicable.
+**Risk type:** Leakage / benchmark contamination risk + mitigated by disjoint movie splits
 
-**Risk type:** Description + Mitigations
-
-**Risk type:** Description + Mitigations
-
-**Risk type:** Description + Mitigations
-
-**Additional Notes:** Add here
+**Additional Notes:** Privacy and fairness risks are not analyzed in the paper.
 
 ### Dataset Version and Maintenance
 #### Maintenance Status
-<!-- scope: telescope -->
-<!-- info: Select **one:** -->
-**Regularly Updated** - New versions of the dataset
-have been or will continue to be
-made available.
-
-**Actively Maintained** - No new versions will be made
-available, but this dataset will
-be actively maintained,
-including but not limited to
-updates to the data.
-
-**Limited Maintenance** - The data will not be updated,
-but any technical issues will be
-addressed.
-
-**Deprecated** - This dataset is obsolete or is
-no longer being maintained.
+**Limited Maintenance / Static benchmark release** (inferred from the paper’s description of a public benchmark release; exact maintenance policy is not specified)
 
 #### Version Details
-<!-- scope: periscope -->
-<!-- info: Provide details about **this** version of the dataset: -->
-**Current Version:** 1.0
+**Current Version:** 1.0 (paper-associated release)
 
-**Last Updated:** MM/YYYY
+**Last Updated:** Not specified in the paper
 
-**Release Date:** MM/YYYY
+**Release Date:** 06/2011 (paper publication timeframe; exact dataset release date not separately stated)
 
 #### Maintenance Plan
-<!-- scope: microscope -->
-<!-- info: Summarize the maintenance plan for the dataset:
+The paper describes the dataset as a released public benchmark for future work, but does not specify a versioning or maintenance process.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links and metrics where applicable.
+**Versioning:** Not specified in the paper
 
-**Versioning:** Summarize here. Include information about criteria for
-versioning the dataset.
+**Updates:** Not specified in the paper
 
-**Updates:** Summarize here. Include information about criteria for refreshing
-or updating the dataset.
+**Errors:** Not specified in the paper
 
-**Errors:** Summarize here. Include information about criteria for refreshing
-or updating the dataset.
+**Feedback:** Dataset website is provided, but no process is specified in the paper
 
-**Feedback:** Summarize here. Include information about criteria for refreshing
-or updating the dataset.
-
-**Additional Notes:** Add here
+**Additional Notes:** Treat as a static benchmark unless later documentation says otherwise.
 
 #### Next Planned Update(s)
-<!-- scope: periscope -->
-<!-- info: Provide details about the next planned update: -->
 **Version affected:** 1.0
 
-**Next data update:** MM/YYYY
+**Next data update:** Not specified in the paper
 
-**Next version:** 1.1
+**Next version:** Not specified in the paper
 
-**Next version update:** MM/YYYY
+**Next version update:** Not specified in the paper
 
 #### Expected Change(s)
-<!-- scope: microscope -->
-<!-- info: Summarize the updates to the dataset and/or data that are expected
-on the next update.
+**Updates to Data:** Not specified in the paper
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-**Updates to Data:** Summarize here. Include links, charts, and visualizations
-as appropriate.
+**Updates to Dataset:** Not specified in the paper
 
-**Updates to Dataset:** Summarize here. Include links, charts, and
-visualizations as appropriate.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ## Example of Data Points
 #### Primary Data Modality
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Image Data
 - Text Data
-- Tabular Data
-- Audio Data
-- Video Data
-- Time Series
-- Graph Data
-- Geospatial Data
-- Multimodel (please specify)
-- Unknown
-- Others (please specify)
 
 #### Sampling of Data Points
-<!-- scope: periscope -->
-<!-- info: Provide link(s) to data points or exploratory demos: -->
-- Demo Link
-- Typical Data Point Link
-- Outlier Data Point Link
-- Other Data Point Link
-- Other Data Point Link
+- Dataset page: http://www.andrew-maas.net/data/sentiment
 
 #### Data Fields
-<!-- scope: microscope -->
-<!-- info: List the fields in data points and their descriptions.
-
-(Usage Note: Describe each field in a data point. Optionally use this to show
-the example.) -->
-
 Field Name | Field Value | Description
 --- | --- | ---
-Field Name | Field Value | Description
-Field Name | Field Value | Description
-Field Name | Field Value | Description
+review_text | Free-form text | User-written IMDB movie review
+sentiment_label | positive / negative | Binary label derived from score thresholds
+original_score | 1–10 scale (used during construction) | IMDB rating used to derive sentiment polarity; the paper does not explicitly state whether this field is included in the public release
 
-**Above:** Provide a caption for the above table or visualization if used.
+**Above:** Conceptual fields inferable from the paper.
 
-**Additional Notes:** Add here
+**Additional Notes:** The paper does not print an example review.
 
 #### Typical Data Point
-<!-- width: half -->
-<!-- info: Provide an example of a typical data point and describe what makes
-it typical.
+A typical data point is a **single IMDB movie review document** paired with a **binary sentiment label**. Reviews are selected to be **highly polarized**, meaning the underlying IMDB score falls clearly into either the negative or positive range.
 
-**Use additional notes to capture any other relevant information or
-considerations.** -->
-Summarize here. Include any criteria for typicality of data point.
-
-```
-{'q_id': '8houtx',
-  'title': 'Why does water heated to room temperature feel colder than the air around it?',
-  'selftext': '',
-  'document': '',
-  'subreddit': 'explainlikeimfive',
-  'answers': {'a_id': ['dylcnfk', 'dylcj49'],
-  'text': ["Water transfers heat more efficiently than air. When something feels cold it's because heat is being transferred from your skin to whatever you're touching. ... Get out of the water and have a breeze blow on you while you're wet, all of the water starts evaporating, pulling even more heat from you."],
-  'score': [5, 2]},
-  'title_urls': {'url': []},
-  'selftext_urls': {'url': []},
-  'answers_urls': {'url': []}}
+```text
+{
+  "review_text": "[movie review text]",
+  "sentiment_label": "positive or negative"
+}
 ```
 
-**Additional Notes:** Add here
+**Additional Notes:** Example is schematic because the paper does not reproduce a real review instance.
 
 #### Atypical Data Point
-<!-- width: half -->
-<!-- info: Provide an example of an outlier data point and describe what makes
-it atypical.
+Atypical cases are not explicitly cataloged in the paper. Relative to the dataset design, an atypical source review would be a **neutral review** (score 5 or 6), but such reviews are **excluded** from the released benchmark.
 
-**Use additional notes to capture any other relevant information or
-considerations.** -->
-Summarize here. Include any criteria for atypicality of data point.
-
-```
-{'q_id': '8houtx',
-  'title': 'Why does water heated to room temperature feel colder than the air around it?',
-  'selftext': '',
-  'document': '',
-  'subreddit': 'explainlikeimfive',
-  'answers': {'a_id': ['dylcnfk', 'dylcj49'],
-  'text': ["Water transfers heat more efficiently than air. When something feels cold it's because heat is being transferred from your skin to whatever you're touching. ... Get out of the water and have a breeze blow on you while you're wet, all of the water starts evaporating, pulling even more heat from you."],
-  'score': [5, 2]},
-  'title_urls': {'url': []},
-  'selftext_urls': {'url': []},
-  'answers_urls': {'url': []}}
+```text
+{
+  "review_text": "[neutral review text]",
+  "sentiment_label": "excluded from dataset"
+}
 ```
 
-**Additional Notes:** Add here
+**Additional Notes:** This describes the exclusion rule rather than an included outlier example.
 
 ## Motivations & Intentions
 ### Motivations
 #### Purpose(s)
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Monitoring
 - Research
-- Production
-- Others (please specify)
 
 #### Domain(s) of Application
-<!-- scope: periscope -->
-<!-- info: Provide a list of key domains of application that the dataset has
-been designed for:<br><br>(Usage Note: Use comma-separated keywords.) -->
-For example: `Machine Learning`, `Computer Vision`, `Object Detection`.
-
-`keyword`, `keyword`, `keyword`
+`Natural Language Processing`, `Sentiment Analysis`, `Text Classification`, `Representation Learning`
 
 #### Motivating Factor(s)
-<!-- scope: microscope -->
-<!-- info: List the primary motivations for creating or curating this dataset:
-
-(Usage Note: use this to describe the problem space and corresponding
-motivations for the dataset.) -->
-For example:
-
-- Bringing demographic diversity to imagery training data for object-detection models
-- Encouraging academics to take on second-order challenges of cultural representation in object detection
-
-Summarize motivation here. Include links where relevant.
+- To learn word vectors that capture both **semantic** and **sentiment** information
+- To exploit abundant **document-level sentiment labels** available in online reviews
+- To provide a **larger and more robust benchmark** than smaller prior movie-review datasets
+- To reduce train/test correlation caused by multiple reviews of the same movie appearing across folds in earlier benchmarks
 
 ### Intended Use
 #### Dataset Use(s)
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Safe for production use
 - Safe for research use
-- Conditional use - some unsafe applications
-- Only approved use
-- Others (please specify)
 
 #### Suitable Use Case(s)
-<!-- scope: periscope -->
-<!-- info: Summarize known suitable and intended use cases of this dataset.
+**Suitable Use Case:** Binary document-level sentiment classification on movie reviews
 
-Use additional notes to capture any specific patterns that readers should
-look out for, or other relevant information or considerations. -->
-**Suitable Use Case:** Summarize here. Include links where necessary.
+**Suitable Use Case:** Research on sentiment-aware word representations or feature learning
 
-**Suitable Use Case:** Summarize here. Include links where necessary.
+**Suitable Use Case:** Benchmark evaluation where disjoint movie splits are important to reduce leakage
 
-**Suitable Use Case:** Summarize here. Include links where necessary.
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper also uses the data to induce sentiment-aware word vectors.
 
 #### Unsuitable Use Case(s)
-<!-- scope: microscope -->
-<!-- info: Summarize known unsuitable and unintended use cases of this dataset.
+**Unsuitable Use Case:** Multi-class rating prediction across the full 1–10 rating scale, because the benchmark excludes neutral reviews and collapses sentiment to two classes
 
-Use additional notes to capture any specific patterns that readers should look
-out for, or other relevant information or considerations. -->
-**Unsuitable Use Case:** Summarize here. Include links where necessary.
+**Unsuitable Use Case:** Domain-general sentiment modeling outside movie reviews without checking transfer performance
 
-**Unsuitable Use Case:** Summarize here. Include links where necessary.
+**Unsuitable Use Case:** Tasks requiring demographic, author, or rich metadata fields, because such information is not described in the paper
 
-**Unsuitable Use Case:** Summarize here. Include links where necessary.
-
-**Additional Notes:** Add here
+**Additional Notes:** These limitations follow directly from the dataset construction choices stated in the paper.
 
 #### Research and Problem Space(s)
-<!-- scope: periscope -->
-<!-- info: Provide a description of the specific problem space that this
-dataset intends to address. -->
-Summarize here. Include any specific research questions.
+The dataset is intended to support research on **sentiment classification** and **sentiment-aware word representation learning**. The paper specifically motivates the dataset as a more robust benchmark that emphasizes **genuine sentiment features** rather than movie-specific lexical cues caused by overlap between training and test examples.
 
 #### Citation Guidelines
-<!-- scope: microscope -->
-<!-- info: Provide guidelines and steps for citing this dataset in research
-and/or production.
-
-Use additional notes to capture any specific patterns that readers should look
-out for, or other relevant information or considerations. -->
-**Guidelines & Steps:** Summarize here. Include links where necessary.
+**Guidelines & Steps:** Cite the ACL 2011 paper that introduces the dataset. When relevant, also cite the dataset website listed in the paper.
 
 **BiBTeX:**
-```
-@article{kuznetsova2020open,
-  title={The open images dataset v4},
-  author={Kuznetsova, Alina and Rom, Hassan and Alldrin, and others},
-  journal={International Journal of Computer Vision},
-  volume={128},
-  number={7},
-  pages={1956--1981},
-  year={2020},
-  publisher={Springer}
+```bibtex
+@inproceedings{maas2011learning,
+  title={Learning Word Vectors for Sentiment Analysis},
+  author={Maas, Andrew L. and Daly, Raymond E. and Pham, Peter T. and Huang, Dan and Ng, Andrew Y. and Potts, Christopher},
+  booktitle={Proceedings of the 49th Annual Meeting of the Association for Computational Linguistics: Human Language Technologies},
+  pages={142--150},
+  year={2011},
+  address={Portland, Oregon},
+  publisher={Association for Computational Linguistics}
 }
 ```
 
-**Additional Notes:** Add here
+**Additional Notes:** The paper is the primary citable source for the dataset.
 
 ## Access, Rentention, & Wipeout
 ### Access
 #### Access Type
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Internal - Unrestricted
-- Internal - Restricted
 - External - Open Access
-- Others (please specify)
 
 #### Documentation Link(s)
-<!-- scope: periscope -->
-<!-- info: Provide links that describe documentation to access this
-dataset: -->
-- Dataset Website URL
-- GitHub URL
+- Dataset Website URL: http://www.andrew-maas.net/data/sentiment
+- Paper URL: https://aclanthology.org/P11-1015.pdf
 
 #### Prerequisite(s)
-<!-- scope: microscope -->
-<!-- info: Please describe any required training or prerequisites to access
-this dataset. -->
-For example:
-
-This dataset requires membership in [specific] database groups:
-
-- Complete the [Mandatory Training]
-- Read [Data Usage Policy]
-- Initiate a Data Requesting by filing
+No prerequisites, training requirements, or approval steps are described in the paper.
 
 #### Policy Link(s)
-<!-- scope: periscope -->
-<!-- info: Provide a link to the access policy: -->
-- Direct download URL
-- Other repository URL
+- Dataset page: http://www.andrew-maas.net/data/sentiment
 
 Code to download data:
-```
-...
+```text
+Not specified in the paper.
 ```
 
 #### Access Control List(s)
-<!-- scope: microscope -->
-<!-- info: List and summarize any access control lists associated with this
-dataset. Include links where necessary.
+**Access Control List:** Not specified in the paper; the dataset is described as publicly released.
 
-Use additional notes to capture any other information relevant to accessing
-the dataset. -->
-**Access Control List:** Write summary and notes here.
-
-**Access Control List:** Write summary and notes here.
-
-**Access Control List:** Write summary and notes here.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ### Retention
 #### Duration
-<!-- scope: periscope -->
-<!-- info: Specify the duration for which this dataset can be retained: -->
-Specify duration in days, months, or years.
+Not specified in the paper.
 
 #### Policy Summary
-<!-- scope: microscope -->
-<!-- info: Summarize the retention policy for this dataset. -->
-**Retention Plan ID:** Write here
+**Retention Plan ID:** Not specified
 
-**Summary:** Write summary and notes here
+**Summary:** Not specified in the paper
 
 #### Process Guide
-<!-- scope: periscope -->
-<!-- info: Summarize any requirements and related steps to retain the dataset.
+No retention process is described in the paper.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-For example:
-
-This dataset compiles with [standard policy guidelines].
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Exception(s) and Exemption(s)
-<!-- scope: microscope -->
-<!-- info: Summarize any exceptions and related steps to retain the dataset.
-Include links where necessary.
+**Exemption Code:** `PUBLIC_DATA` (reasonable classification based on the public release described in the paper)
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-**Exemption Code:** `ANONYMOUS_DATA` /
-`EMPLOYEE_DATA` / `PUBLIC_DATA` /
-`INTERNAL_BUSINESS_DATA` /
-`SIMULATED_TEST_DATA`
+**Summary:** The dataset is described as publicly released for research, but no formal retention policy is given in the paper.
 
-**Summary:** Write summary and notes here.
-
-**Additional Notes:** Add here
+**Additional Notes:** This exemption code is a practical classification, not a statement from the paper.
 
 ### Wipeout and Deletion
 #### Duration
-<!-- scope: periscope -->
-<!-- info: Specify the duration after which this dataset should be deleted or
-wiped out: -->
-Specify duration in days, months, or years.
+Not specified in the paper.
 
 #### Deletion Event Summary
-<!-- scope: microscope -->
-<!-- info: Summarize the sequence of events and allowable processing for data
-deletion.
-
-Use additional notes to capture any other relevant information or
-considerations. -->
 **Sequence of deletion and processing events:**
+- Not specified in the paper
 
-- Summarize first event here
-- Summarize second event here
-- Summarize third event here
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Acceptable Means of Deletion
-<!-- scope: periscope -->
-<!-- info: List the acceptable means of deletion: -->
-- Write acceptable means of deletion
-- Write acceptable means of deletion
-- Write acceptable means of deletion
+- Not specified in the paper
 
 #### Post-Deletion Obligations
-<!-- scope: microscope -->
-<!-- info: Summarize the sequence of obligations after a deletion event.
-
-**Use additional notes to capture any other relevant information or
-considerations.** -->
 **Sequence of post-deletion obligations:**
+- Not specified in the paper
 
-- Summarize first obligation here
-- Summarize second obligation here
-- Summarize third obligation here
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Operational Requirement(s)
-<!-- scope: periscope -->
-<!-- info: List any wipeout integration operational requirements: -->
 **Wipeout Integration Operational Requirements:**
-
-- Write first requirement here
-- Write second requirement here
-- Write third requirement here
+- Not specified in the paper
 
 #### Exceptions and Exemptions
-<!-- scope: microscope -->
-<!-- info: Summarize any exceptions and related steps to a deletion event.
+**Policy Exception bug:** Not specified
 
-**Use additional notes to capture any other relevant information or
-considerations.** -->
-**Policy Exception bug:** [bug]
+**Summary:** Not specified in the paper
 
-**Summary:** Write summary and notes here
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ## Provenance
 ### Collection
 #### Method(s) Used
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** methods used to collect data: -->
-- API
-- Artificially Generated
-- Crowdsourced - Paid
-- Crowdsourced - Volunteer
-- Vendor Collection Efforts
-- Scraped or Crawled
-- Survey, forms, or polls
-- Taken from other existing datasets
-- Unknown
-- To be determined
-- Others (please specify)
+- Others: Collected from publicly available IMDB reviews; the exact harvesting pipeline is not described in the paper
 
 #### Methodology Detail(s)
-<!-- scope: periscope -->
-<!-- info: Provide a description of each collection method used.
-
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for collection method
-type.) -->
 **Collection Type**
 
-**Source:** Describe here. Include links where available.
+**Source:** IMDB movie reviews
 
-**Platform:** [Platform Name], Describe platform here. Include links where relevant.
+**Platform:** IMDB, an online movie review platform
 
-**Is this source considered sensitive or high-risk?** [Yes/No]
+**Is this source considered sensitive or high-risk?** Not specified in the paper
 
-**Dates of Collection:** [MMM YYYY - MMM YYYY]
+**Dates of Collection:** Not specified in the paper
 
 **Primary modality of collection data:**
-
-*Usage Note: Select one for this collection type.*
-
-- Image Data
 - Text Data
-- Tabular Data
-- Audio Data
-- Video Data
-- Time Series
-- Graph Data
-- Geospatial Data
-- Unknown
-- Multimodal (please specify)
-- Others (please specify)
 
 **Update Frequency for collected data:**
-
-*Usage Note: Select one for this collection type.*
-
-- Yearly
-- Quarterly
-- Monthly
-- Biweekly
-- Weekly
-- Daily
-- Hourly
 - Static
-- Others (please specify)
 
 **Additional Links for this collection:**
+- Dataset page: http://www.andrew-maas.net/data/sentiment
 
-- [Access Policy]
-- [Wipeout Policy]
-- [Retention Policy]
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper states that the authors constructed a collection of 50,000 reviews from IMDB and capped the number of reviews at 30 per movie.
 
 #### Source Description(s)
-<!-- scope: microscope -->
-<!-- info: Provide a description of each upstream source of data.
+- **Source:** Publicly available movie reviews from IMDB
+- **Source:** User-provided IMDB review scores used to derive sentiment polarity labels
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-- **Source:** Describe here. Include links, data examples, metrics, visualizations where relevant.
-- **Source:** Describe here. Include links, data examples, metrics, visualizations where relevant.
-- **Source:** Describe here. Include links, data examples, metrics, visualizations where relevant.
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper does not describe any additional upstream sources.
 
 #### Collection Cadence
-<!-- scope: telescope -->
-<!-- info: Select **all applicable**: -->
-**Static:** Data was collected once from single or multiple sources.
-
-**Streamed:** Data is continuously acquired from single or multiple sources.
-
-**Dynamic:** Data is updated regularly from single or multiple sources.
-
-**Others:** Please specify
+**Static:** Data was collected once and released as a benchmark.
 
 #### Data Integration
-<!-- scope: periscope -->
-<!-- info: List all fields collected from different sources, and specify if
-they were included or excluded from the dataset.
-
-Use additional notes to
-capture any other relevant information or considerations.
-
-(Usage Note: Duplicate and complete the following for each upstream
-source.) -->
 **Source**
 
 **Included Fields**
@@ -818,10 +418,10 @@ Data fields that were collected and are included in the dataset.
 
 Field Name | Description
 --- | ---
-Field Name | Describe here. Include links, data examples, metrics, visualizations where relevant.
-Field Name | Describe here. Include links, data examples, metrics, visualizations where relevant.
+review_text | Movie review text from IMDB
+sentiment_label | Binary polarity label derived from rating thresholds
 
-**Additional Notes:** Add here
+**Additional Notes:** Exact serialized file schema is not specified in the paper.
 
 **Excluded Fields**
 
@@ -829,192 +429,96 @@ Data fields that were collected but are excluded from the dataset.
 
 Field Name | Description
 --- | ---
-Field Name | Describe here. Include links, data examples, metrics, visualizations where relevant.
-Field Name | Describe here. Include links, data examples, metrics, visualizations where relevant.
+neutral reviews | Reviews with score 5 or 6 are excluded
+extra same-movie reviews | More than 30 reviews per movie are not included
 
-**Additional Notes:** Add here
+**Additional Notes:** Disjoint movie splits are used between train and test.
 
 #### Data Processing
-<!-- scope: microscope -->
-<!-- info: Summarize how data from different sources or methods aggregated,
-processed, or connected.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the following for each source OR
-collection method.) -->
 **Collection Method or Source**
 
-**Description:** Describe here. Include links where relevant.
+**Description:** The authors construct a balanced sentiment dataset from IMDB reviews.
 
-**Methods employed:** Describe here. Include links where relevant.
+**Methods employed:** Threshold ratings into positive and negative classes; exclude neutral reviews; cap reviews per movie at 30; create disjoint movie sets for train/test; for representation learning, use 5,000 most frequent tokens while ignoring the 50 most frequent terms, do not apply stemming, do not apply traditional stop-word removal, and allow some non-word sentiment tokens.
 
-**Tools or libraries:** Describe here. Include links where relevant.
+**Tools or libraries:** Not specified in the paper.
 
-**Additional Notes:** Add here
+**Additional Notes:** The paper also mentions a training variant with 50,000 additional unlabeled reviews.
 
 ### Collection Criteria
 #### Data Selection
-<!-- scope: telescope -->
-<!-- info: Summarize the data selection criteria.
+- **Collection Method of Source:** Select IMDB movie reviews with no more than 30 reviews per movie
+- **Collection Method of Source:** For benchmark classification, include only highly polarized reviews
+- **Collection Method of Source:** Use disjoint movie sets for training and testing
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-- **Collection Method of Source:** Summarize data selection criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data selection criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data selection criteria here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** These are the main documented criteria.
 
 #### Data Inclusion
-<!-- scope: periscope -->
-<!-- info: Summarize the data inclusion criteria.
+- **Collection Method of Source:** Include reviews with score **≤ 4/10** as negative
+- **Collection Method of Source:** Include reviews with score **≥ 7/10** as positive
+- **Collection Method of Source:** Include an even number of positive and negative reviews
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-- **Collection Method of Source:** Summarize data inclusion criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data inclusion criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data inclusion criteria here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** The released benchmark is balanced.
 
 #### Data Exclusion
-<!-- scope: microscope -->
-<!-- info: Summarize the data exclusion criteria.
+- **Collection Method of Source:** Exclude neutral reviews (scores 5 or 6)
+- **Collection Method of Source:** Exclude reviews beyond the per-movie cap of 30
+- **Collection Method of Source:** Avoid movie overlap between training and test sets
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-- **Collection Method of Source:** Summarize data exclusion criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data exclusion criteria here. Include links where available.
-- **Collection Method of Source:** Summarize data exclusion criteria here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** These exclusions are central to the paper’s benchmark design.
 
 ### Relationship to Source
 #### Use & Utility(ies)
-<!-- scope: telescope -->
-<!-- info: Describe how the resulting dataset is aligned with the purposes,
-motivations, or intended use of the upstream source(s).
+- **Source Type:** IMDB reviews are used to build a benchmark for sentiment classification and to provide document-level supervision for sentiment-aware word vector learning
 
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each source type.) -->
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** The source platform supplies both free-text reviews and review scores.
 
 #### Benefit and Value(s)
-<!-- scope: periscope -->
-<!-- info: Summarize the benefits of the resulting dataset to its consumers,
-compared to the upstream source(s).
+- **Source Type:** Larger than the 2,000-review Pang and Lee benchmark
+- **Source Type:** Reduced train/test contamination through disjoint movie splits
+- **Source Type:** Balanced positive/negative classes support clearer benchmark comparison
 
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each source type.) -->
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper explicitly motivates these advantages.
 
 #### Limitation(s) and Trade-Off(s)
-<!-- scope: microscope -->
-<!-- info: What are the limitations of the resulting dataset to its consumers,
-compared to the upstream source(s)?
-
-Break down by source type.<br><br>(Usage Note: Duplicate and complete the
-following for each source type.) -->
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
+- **Source Type:** Domain limited to movie reviews
+- **Source Type:** Neutral sentiment is removed, so the benchmark does not cover the full rating spectrum
+- **Source Type:** The paper does not provide rich metadata, demographic information, or collection-time details
 
 ### Version and Maintenance
-<!-- info: Fill this next row if this is not the first version of the dataset,
-and there is no data card available for the first version -->
 #### First Version
-<!-- scope: periscope -->
-<!-- info: Provide a **basic description of the first version** of this
-dataset. -->
-- **Release date:** MM/YYYY
-- **Link to dataset:** [Dataset Name + Version]
-- **Status:** [Select one: Actively Maintained/Limited Maintenance/Deprecated]
-- **Size of Dataset:** 123 MB
-- **Number of Instances:** 123456
+- **Release date:** 06/2011 (paper timeframe; exact date not separately specified)
+- **Link to dataset:** http://www.andrew-maas.net/data/sentiment
+- **Status:** Limited Maintenance / Static benchmark release (not explicitly specified)
+- **Size of Dataset:** Not specified in the paper
+- **Number of Instances:** 50,000
 
 #### Note(s) and Caveat(s)
-<!-- scope: microscope -->
-<!-- info: Summarize the caveats or nuances of the first version of this
-dataset that may affect the use of the current version.
+The paper presents this as the benchmark release and does not describe earlier versions.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Cadence
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Yearly
-- Quarterly
-- Monthly
-- Biweekly
-- Weekly
-- Daily
-- Hourly
 - Static
-- Others (please specify)
 
 #### Last and Next Update(s)
-<!-- scope: periscope -->
-<!-- info: Please describe the update schedule: -->
-- **Date of last update:** DD/MM/YYYY
-- **Total data points affected:** 12345
-- **Data points updated:** 12345
-- **Data points added:** 12345
-- **Data points removed:** 12345
-- **Date of next update:** DD/MM/YYYY
+- **Date of last update:** Not specified in the paper
+- **Total data points affected:** Not specified in the paper
+- **Data points updated:** Not specified in the paper
+- **Data points added:** Not specified in the paper
+- **Data points removed:** Not specified in the paper
+- **Date of next update:** Not specified in the paper
 
 #### Changes on Update(s)
-<!-- scope: microscope -->
-<!-- info: Summarize the changes that occur when the dataset is refreshed.
+- **Source Type:** Not specified in the paper
 
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each source type.) -->
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-- **Source Type:** Summarize here. Include links where available.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ## Human and Other Sensitive Attributes
 #### Sensitive Human Attribute(s)
-<!-- scope: telescope -->
-<!-- info: Select **all attributes** that are represented (directly or
-indirectly) in the dataset. -->
-- Gender
-- Socio-economic status
-- Geography
-- Language
-- Age
-- Culture
-- Experience or Seniority
-- Others (please specify)
+- Not specified in the paper
 
 #### Intentionality
-<!-- scope: periscope -->
-<!-- info: List fields in the dataset that contain human attributes, and
-specify if their collection was intentional or unintentional.
-
-Use additional notes to capture any other relevant information or
-considerations. -->
 **Intentionally Collected Attributes**
 
 Human attributes were labeled or collected as a part of the dataset creation
@@ -1022,10 +526,9 @@ process.
 
 Field Name | Description
 --- | ---
-Field Name | Human Attributed Collected
-Field Name | Human Attributed Collected
+None reported | The paper does not report collecting demographic or sensitive human attributes
 
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 **Unintentionally Collected Attributes**
 
@@ -1034,1596 +537,414 @@ creation process but can be inferred using additional methods.
 
 Field Name | Description
 --- | ---
-Field Name | Human Attributed Collected
-Field Name | Human Attributed Collected
+review_text | Author style, background, or other attributes may be inferable from free text, but this is not analyzed in the paper
 
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Rationale
-<!-- scope: microscope -->
-<!-- info: Describe the motivation, rationale, considerations or approaches
-that caused this dataset to include the indicated human attributes.
-
-Summarize why or how this might affect the use of the dataset. -->
-Summarize here. Include links, table, and media as relevant.
+The paper’s goal is sentiment analysis and sentiment-aware representation learning, not human-attribute analysis.
 
 #### Source(s)
-<!-- scope: periscope -->
-<!-- info: List the sources of the human attributes.
+- **Human Attribute:** Not specified in the paper
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-- **Human Attribute:** Sources
-- **Human Attribute:** Sources
-- **Human Attribute:** Sources
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Methodology Detail(s)
-<!-- scope: microscope -->
-<!-- info: Describe the methods used to collect human attributes in the
-dataset.
+**Human Attribute Method:** Not specified in the paper
 
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each human
-attribute.) -->
-
-**Human Attribute Method:** Describe the collection method here. Include links where necessary
-
-**Collection task:** Describe the task here. Include links where necessary
+**Collection task:** Not specified in the paper
 
 **Platforms, tools, or libraries:**
+- Not specified in the paper
 
-- [Platform, tools, or libraries]: Write description here
-- [Platform, tools, or libraries]: Write description here
-- [Platform, tools, or libraries]: Write description here
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Distribution(s)
-<!-- width: full -->
-<!-- info: Provide basic descriptive statistics for each human attribute,
-noting key takeaways in the caption.
+Human Attribute | Label or Class | Label or Class
+--- | --- | ---
+Count | Not specified | Not specified
 
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each human
-attribute.) -->
-Human Attribute | Label or Class | Label or Class | Label or Class | Label or Class
---- | --- | --- | --- | ---
-Count | 123456 | 123456 | 123456 | 123456
-[Statistic] | 123456 | 123456 | 123456 | 123456
-[Statistic] | 123456 | 123456 | 123456 | 123456
-[Statistic] | 123456 | 123456 | 123456 | 123456
-
-**Above:** Provide a caption for the above table or visualization.
-**Additional Notes:** Add here
+**Above:** No human-attribute distributions are reported in the paper.
+**Additional Notes:** None.
 
 #### Known Correlations
-<!-- scope: periscope -->
-<!-- info: Describe any known correlations with the indicated sensitive
-attributes in this dataset.
+[`review_text`]
 
-Use additional notes to capture any other relevant information or
-considerations.
+**Description:** The paper discusses **movie-specific lexical correlation** as a benchmark concern in earlier datasets, not demographic correlation.
 
-(Usage Note: Duplicate for each known correlation.) -->
-[`field_name`, `field_name`]
+**Impact on dataset use:** Disjoint movie splits are used to reduce memorization of movie-specific words.
 
-**Description:** Summarize here. Include visualizations, metrics, or links
-where necessary.
-
-**Impact on dataset use:** Summarize here. Include visualizations, metrics, or
-links where necessary.
-
-**Additional Notes:** add here
+**Additional Notes:** This is the only explicitly discussed correlation risk.
 
 #### Risk(s) and Mitigation(s)
-<!-- scope: microscope -->
-<!-- info: Summarize systemic or residual risks, performance expectations,
-trade-offs and caveats because of human attributes in this dataset.
-
-Use additional notes to capture any other relevant information or
-considerations.
-
-Usage Note: Duplicate and complete the following for each human attribute. -->
 **Human Attribute**
 
-Summarize here. Include links and metrics where applicable.
+The paper does not discuss fairness or demographic risk analysis.
 
-**Risk type:** [Description + Mitigations]
+**Risk type:** Inference risk from free text + not analyzed in the paper
 
-**Risk type:** [Description + Mitigations]
+**Trade-offs, caveats, & other considerations:** Use with caution for any human-attribute inference task.
 
-**Risk type:** [Description + Mitigations]
-
-**Trade-offs, caveats, & other considerations:** Summarize here. Include
-visualizations, metrics, or links where necessary.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ## Extended Use
 ### Use with Other Data
 #### Safety Level
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Safe to use with other data
-- Conditionally safe to use with other data
-- Should not be used with other data
 - Unknown
-- Others (please specify)
 
 #### Known Safe Dataset(s) or Data Type(s)
-<!-- scope: periscope -->
-<!-- info: List the known datasets or data types and corresponding
-transformations that **are safe to join or aggregate** this dataset with. -->
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
-
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
-
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
+**Dataset or Data Type:** Not specified in the paper.
 
 #### Best Practices
-<!-- scope: microscope -->
-<!-- info: Summarize best practices for using this dataset with other datasets
-or data types.
+Use the dataset primarily as a **standalone benchmark** for sentiment classification unless there is a clearly justified reason to join it with other data.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include visualizations, metrics, demonstrative examples,
-or links where necessary.
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper does not provide data-joining guidance.
 
 #### Known Unsafe Dataset(s) or Data Type(s)
-<!-- scope: periscope -->
-<!-- info: Fill this out if you selected "Conditionally safe to use with other
-datasets" or "Should not be used with other datasets":
-
-List the known datasets or data types and corresponding transformations that
-are **unsafe to join or aggregate** with this dataset. -->
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
-
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
-
-**Dataset or Data Type:** Summarize here. Include visualizations, metrics,
-or links where necessary.
+**Dataset or Data Type:** Not specified in the paper.
 
 #### Limitation(s) and Recommendation(s)
-<!-- scope: microscope -->
-<!-- info: Fill this out if you selected "Conditionally safe to use with
-other datasets" or "Should not be used with
-other datasets":
+The paper does not discuss joining with other datasets. Because the data are free-text reviews, joining with author or account metadata could change the privacy and leakage profile.
 
-Summarize limitations of the dataset that introduce foreseeable risks when the
-dataset is conjoined with other datasets.
-
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links and metrics where applicable.
-
-**Limitation type:** Dataset or data type, description and recommendation.
-
-**Limitation type:** Dataset or data type, description and recommendation.
-
-**Limitation type:** Dataset or data type, description and recommendation.
-
-**Additional Notes:** Add here
+**Additional Notes:** This is a downstream-use recommendation, not a statement from the paper.
 
 ### Forking & Sampling
 #### Safety Level
-<!-- scope: telescope -->
-<!-- info: Select **one**: -->
-- Safe to form and/or sample
 - Conditionally safe to fork and/or sample
-- Should not be forked and/or sampled
-- Unknown
-- Others (please specify)
 
 #### Acceptable Sampling Method(s)
-<!-- scope: periscope -->
-<!-- info: Select **all applicable** acceptable methods to sample this
-dataset: -->
-- Cluster Sampling
-- Haphazard Sampling
-- Multi-stage sampling
 - Random Sampling
-- Retrospective Sampling
 - Stratified Sampling
-- Systematic Sampling
-- Weighted Sampling
-- Unknown
-- Unsampled
-- Others (please specify)
 
 #### Best Practice(s)
-<!-- scope: microscope -->
-<!-- info: Summarize the best practices for forking or sampling this dataset.
+Maintain **class balance** and, when possible, preserve **movie-level disjointness** between train and test partitions.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links, figures, and demonstrative examples where
-available.
-
-**Additional Notes:** Add here
+**Additional Notes:** These recommendations follow the paper’s benchmark design logic.
 
 #### Risk(s) and Mitigation(s)
-<!-- scope: periscope -->
-<!-- info: Fill this out if you selected "Conditionally safe to fork and/or
-sample" or "Should not be forked and/or sampled":
+Sampling that ignores movie identity may reintroduce benchmark leakage through movie-specific words.
 
-Summarize known or residual risks associated with forking and sampling methods
-when applied to the dataset.
+**Risk Type:** Train/test contamination risk + mitigate by grouping/splitting at the movie level
 
-Use additional notes to capture any other
-relevant information or considerations. -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** [Description + Mitigations]
-
-**Risk Type:** [Description + Mitigations]
-
-**Risk Type:** [Description + Mitigations]
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Limitation(s) and Recommendation(s)
-<!-- scope: microscope -->
-<!-- info: Fill this out if you selected "Conditionally safe to fork and/or
-sample" or "Should not be forked and/or sample":
+The benchmark is intentionally designed to prevent memorization of movie-specific lexical cues. Any fork or sample that breaks this constraint may inflate performance.
 
-Summarize the limitations that the dataset introduces when forking
-or sampling the dataset and corresponding recommendations.
+**Limitation Type:** Split design + preserve disjoint movie sets where possible
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-Summarize here. Include links and metrics where applicable.
-
-**Limitation Type:** [Description + Recommendation]
-
-**Limitation Type:** [Description + Recommendation]
-
-**Limitation Type:** [Description + Recommendation]
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ### Use in ML or AI Systems
 #### Dataset Use(s)
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** -->
 - Training
 - Testing
 - Validation
-- Development or Production Use
-- Fine Tuning
-- Others (please specify)
 
 #### Notable Feature(s)
-<!-- scope: periscope -->
-<!-- info: Describe any notable feature distributions or relationships between
-individual instances made explicit.
+**Exploration Demo:** Dataset page listed in the paper.
 
-Include links to servers where readers can explore the data on their own. -->
+**Notable Field Name:** Sentiment label is binary and derived from highly polarized scores only.
 
-**Exploration Demo:** [Link to server or demo.]
+**Notable Field Name:** Dataset is balanced across positive and negative classes.
 
-**Notable Field Name:** Describe here. Include links, data examples, metrics,
-visualizations where relevant.
+**Notable Field Name:** Training and test sets use disjoint movie sets.
 
-**Above:** Provide a caption for the above table or visualization.
+**Above:** These are the main benchmark characteristics emphasized in the paper.
 
-**Additional Notes:** Add here
+**Additional Notes:** The paper also uses 10-fold cross-validation on other datasets for comparison.
 
 #### Usage Guideline(s)
-<!-- scope: microscope -->
-<!-- info: Summarize usage guidelines or policies that consumers should be
-aware of.
+**Usage Guidelines:** Use as a benchmark for document-level sentiment classification and sentiment-aware representation learning. Preserve the documented split logic and note that the task is binary polarity classification, not full-scale rating prediction.
 
-Use additional notes to capture any other relevant information or
-considerations. -->
-**Usage Guidelines:** Summarize here. Include links where necessary.
+**Approval Steps:** Not specified in the paper.
 
-**Approval Steps:** Summarize here. Include links where necessary.
+**Reviewer:** Not specified in the paper.
 
-**Reviewer:** Provide the name of a reviewer for publications referencing
-this dataset.
-
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 #### Distribution(s)
-<!-- scope: periscope -->
-<!-- info: Describe the recommended splits and corresponding criteria.
-
-Use additional notes to capture any other
-relevant information or considerations. -->
-
 Set | Number of data points
 --- | ---
-Train | 62,563
-Test | 62,563
-Validation | 62,563
-Dev | 62,563
+Train | 25,000
+Test | 25,000
+Validation | Not separately provided in the paper
+Dev | Not separately provided in the paper
 
-**Above:** Provide a caption for the above table or visualization.
+**Above:** Official split information explicitly stated in the paper.
 
-**Additional Notes:** Add here
+**Additional Notes:** Hyperparameters were cross-validated on the training set.
 
 #### Known Correlation(s)
-<!-- scope: microscope -->
-<!-- info: Summarize any known correlations with
-the indicated features in this dataset.
+`movie identity`, `review_text`
 
-Use additional notes to capture any other
-relevant information or considerations.
+**Description:** Earlier smaller benchmarks contained correlated reviews from the same movie across train/test folds. The new IMDB dataset is designed to avoid this issue.
 
-(Usage Note: Duplicate for each known
-correlation.) -->
-`field_name`, `field_name`
+**Impact on dataset use:** Reported results better reflect genuine sentiment generalization rather than memorization of movie-specific words.
 
-**Description:** Summarize here. Include
-visualizations, metrics, or links where
-necessary.
+**Risks from correlation:** Breaking the disjoint-by-movie split can inflate performance estimates.
 
-**Impact on dataset use:** Summarize here.
-Include visualizations, metrics, or links
-where necessary.
-
-**Risks from correlation:** Summarize here.
-Include recommended mitigative steps if
-available.
-
-**Additional Notes:** Add here
+**Additional Notes:** This is a central motivation in the paper.
 
 #### Split Statistics
-<!-- scope: periscope -->
-<!-- width: full -->
-<!-- info: Provide the sizes of each split. As appropriate, provide any
-descriptive statistics for features. -->
-
 Statistic | Train | Test | Valid | Dev
 --- | --- | --- | --- | ---
-Count | 123456 | 123456 | 123456 | 123456
-Descriptive Statistic | 123456 | 123456 | 123456 | 123456
-Descriptive Statistic | 123456 | 123456 | 123456 | 123456
-Descriptive Statistic | 123456 | 123456 | 123456 | 123456
+Count | 25,000 | 25,000 | Not specified | Not specified
+Class balance | Balanced positive/negative | Balanced positive/negative | Not specified | Not specified
+Movie overlap | Disjoint from test | Disjoint from train | Not specified | Not specified
 
-**Above:** Caption for table above.
+**Above:** Split statistics directly supported by the paper.
 
 ## Transformations
-<!-- info: Fill this section if any transformations were applied in the
-creation of your dataset. -->
 ### Synopsis
 #### Transformation(s) Applied
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** transformations
-that were applied to the dataset. -->
-- Anomaly Detection
-- Cleaning Mismatched Values
-- Cleaning Missing Values
 - Converting Data Types
-- Data Aggregation
-- Dimensionality Reduction
-- Joining Input Sources
-- Redaction or Anonymization
-- Others (Please specify)
+- Others (Please specify): Rating-threshold label derivation, vocabulary filtering, train/test splitting by movie
 
 #### Field(s) Transformed
-<!-- scope: periscope -->
-<!-- info: Provide the fields in the dataset that
-were transformed.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete
-the following for each transformation
-type applied. Include the data types to
-which fields were transformed.) -->
 **Transformation Type**
 
 Field Name | Source & Target
 --- | ---
-Field Name | Source Field: Target Field
-Field Name | Source Field: Target Field
-... | ...
+original_score | 1–10 IMDB score -> binary sentiment polarity (for the benchmark)
+original_score | 1–10 IMDB score -> continuous value in [0, 1] (for model training described in the paper)
+vocabulary | Full vocabulary -> 5,000 most frequent tokens, excluding the top 50 most frequent terms (for word representation learning)
 
-**Additional Notes:** Add here
+**Additional Notes:** These are the key transformations explicitly described.
 
 #### Library(ies) and Method(s) Used
-<!-- scope: microscope -->
-<!-- info: Provide a description of the methods
-used to transform or process the
-dataset.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete
-the following for each transformation
-type applied.) -->
 **Transformation Type**
 
-**Method:** Describe the transformation
-method here. Include links where
-necessary.
+**Method:** Threshold rating scores to derive labels; linearly map star values to [0,1] for supervised sentiment training; restrict vocabulary; do not apply stemming; do not use traditional stop-word removal; allow some non-word sentiment tokens.
 
 **Platforms, tools, or libraries:**
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+- Not specified in the paper
 
-**Transformation Results:** Provide
-results, outcomes, and actions taken
-because of the transformations. Include
-visualizations where available.
+**Transformation Results:** Produced a balanced binary sentiment benchmark and a training setup for sentiment-aware word vectors.
 
-**Additional Notes:** Add here
+**Additional Notes:** None.
 
 ### Breakdown of Transformations
-<!-- info: Fill out relevant rows. -->
 #### Cleaning Missing Value(s)
-<!-- scope: telescope -->
-<!-- info: Which fields in the data were missing
-values? How many? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or description
-
-**Field Name:** Count or description
-
-**Field Name:** Count or description
+Not specified in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: How were missing values cleaned?
-What other choices were considered? -->
-Summarize here. Include links where necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why were missing values cleaned using
-this method (over others)? Provide
-comparative charts showing before
-and after missing values were cleaned. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-- **Risk Type:** Description + Mitigations
-- **Risk Type:** Description + Mitigations
-- **Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were
-made? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Cleaning Mismatched Value(s)
-<!-- scope: telescope -->
-<!-- info: Which fields in the data were corrected
-for mismatched values? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+Not specified in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: How were incorrect or mismatched
-values cleaned? What other choices
-were considered? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why were incorrect or mismatched
-values cleaned using this method (over
-others)? Provide a comparative
-analysis demonstrating before and
-after values were cleaned. -->
-Summarize here. Include links where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were made? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Anomalies
-<!-- scope: telescope -->
-<!-- info: How many anomalies or outliers were
-detected?
-If at all, how were detected anomalies
-or outliers handled?
-Why or why not? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+Not specified in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: What methods were used to detect
-anomalies or outliers? -->
-Summarize here. Include links where necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Provide a comparative analysis
-demonstrating before and after
-anomaly handling measures. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were made? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Dimensionality Reduction
-<!-- scope: telescope -->
-<!-- info: How many original features were
-collected and how many dimensions
-were reduced? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+Not specified as a dataset transformation in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: What methods were used to reduce the
-dimensionality of the data? What other
-choices were considered? -->
-Summarize here. Include links where
-necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why were features reduced using this
-method (over others)? Provide
-comparative charts showing before
-and after dimensionality reduction
-processes. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risks
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were made? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Joining Input Sources
-<!-- scope: telescope -->
-<!-- info: What were the distinct input sources that were joined? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+Not specified in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: What are the shared columns of fields used to join these
-sources? -->
-Summarize here. Include links where necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why were features joined using this
-method over others?
-
-Provide comparative charts showing
-before and after dimensionality
-reduction processes. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where
-available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were
-made? -->
-Summarize here. Include links where
-available.
+Not specified in the paper.
 
 #### Redaction or Anonymization
-<!-- scope: telescope -->
-<!-- info: Which features were redacted or
-anonymized? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+Not specified in the paper.
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: What methods were used to redact or
-anonymize data? -->
-Summarize here. Include links where necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Not specified in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why was data redacted or anonymized
-using this method over others? Provide
-comparative charts showing before
-and after redaction or anonymization
-process. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+Not specified in the paper.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
-
-**Risk Type:** Description + Mitigations
+Not specified in the paper.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were
-made? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Others (Please Specify)
-<!-- scope: telescope -->
-<!-- info: What was done? Which features or
-fields were affected? -->
-Summarize here. Include links where available.
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
-
-**Field Name:** Count or Description
+The paper explicitly describes the following dataset-construction transformations:
+- Thresholding review scores into positive/negative labels
+- Excluding neutral reviews
+- Capping reviews per movie at 30
+- Enforcing disjoint movie sets between train and test
+- Restricting vocabulary for representation learning experiments
 
 #### Method(s) Used
-<!-- scope: periscope -->
-<!-- info: What method were used? -->
-Summarize here. Include links where necessary.
-
-**Platforms, tools, or libraries**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
+Rule-based filtering and thresholding, as described in the paper.
 
 #### Comparative Summary
-<!-- scope: microscope -->
-<!-- info: Why was this method used over
-others? Provide comparative charts
-showing before and after this
-transformation. -->
-Summarize here. Include links, tables, visualizations where available.
-
-**Field Name** | **Diff**
---- | ---
-Field Name | Before: After
-Field Name | Before: After
-... | ...
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
+These transformations are used to create a more robust sentiment benchmark and reduce leakage from movie-specific overlap.
 
 #### Residual & Other Risk(s)
-<!-- scope: telescope -->
-<!-- info: What risks were introduced because of
-this transformation? Which risks were
-mitigated? -->
-Summarize here. Include links and metrics where applicable.
-
-**Risk type:** [Description + Mitigations]
-
-**Risk type:** [Description + Mitigations]
-
-**Risk type:** [Description + Mitigations]
+A stricter benchmark may reduce ecological validity for real-world rating distributions because neutral reviews are excluded.
 
 #### Human Oversight Measure(s)
-<!-- scope: periscope -->
-<!-- info: What human oversight measures,
-including additional testing,
-investigations and approvals were
-taken due to this transformation? -->
-Summarize here. Include links where available.
+Not specified in the paper.
 
 #### Additional Considerations
-<!-- scope: microscope -->
-<!-- info: What additional considerations were made? -->
-Summarize here. Include links where available.
+None.
 
 ## Annotations & Labeling
-<!-- info: Fill this section if any human or algorithmic annotation tasks were
-performed in the creation of your dataset. -->
 #### Annotation Workforce Type
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** annotation
-workforce types or methods used
-to annotate the dataset: -->
-- Annotation Target in Data
-- Machine-Generated
-- Annotations
-- Human Annotations (Expert)
 - Human Annotations (Non-Expert)
-- Human Annotations (Employees)
-- Human Annotations (Contractors)
-- Human Annotations (Crowdsourcing)
-- Human Annotations (Outsourced / Managed)
-- Teams
-- Unlabeled
-- Others (Please specify)
+- Machine-Generated Annotations
 
 #### Annotation Characteristic(s)
-<!-- scope: periscope -->
-<!-- info: Describe relevant characteristics of annotations
-as indicated. For quality metrics, consider
-including accuracy, consensus accuracy, IRR,
-XRR at the appropriate granularity (e.g. across
-dataset, by annotator, by annotation, etc.).
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each annotation type.) -->
 **Annotation Type** | **Number**
 --- | ---
-Number of unique annotations | 123456789
-Total number of annotations | 123456789
-Average annotations per example | 123456789
-Number of annotators per example | 123456789
-[Quality metric per granuality] | 123456789
-[Quality metric per granuality] | 123456789
-[Quality metric per granuality] | 123456789
+Number of unique annotations | 50,000 review-level labels
+Total number of annotations | 50,000
+Average annotations per example | 1
+Number of annotators per example | 1 reviewer-provided rating per included review (as implied by the source platform)
+Quality metrics | Not specified in the paper
 
-**Above:** Provide a caption for the above table or visualization.
+**Above:** Annotation information inferable from IMDB review ratings and the paper’s label-derivation rules.
 
-**Additional Notes:** Add here
+**Additional Notes:** Binary labels are derived from original user scores.
 
 #### Annotation Description(s)
-<!-- scope: microscope -->
-<!-- info: Provide descriptions of the annotations
-applied to the dataset. Include links
-and indicate platforms, tools or libraries
-used wherever possible.
+**(Rating-derived polarity labels)**
 
-Use additional notes to capture any
-other relevant information or
-considerations.
+**Description:** Original IMDB review scores are used to derive sentiment labels. Reviews with score **≤ 4** are treated as negative and reviews with score **≥ 7** are treated as positive. Neutral reviews are excluded.
 
-(Usage Note: Duplicate and complete
-the following for each annotation
-type.) -->
-**(Annotation Type)**
-
-**Description:** Description of annotations (labels, ratings) produced.
-Include how this was created or authored.
-
-**Link:** Relevant URL link.
+**Link:** http://www.andrew-maas.net/data/sentiment
 
 **Platforms, tools, or libraries:**
+- IMDB: source of public ratings and review text
+- Label derivation rules: described in the paper
 
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-
-**Additional Notes:** Add here
+**Additional Notes:** The paper also maps ratings to [0,1] for the sentiment component of model training.
 
 #### Annotation Distribution(s)
-<!-- scope: periscope -->
-<!-- info: Provide a distribution of annotations for each
-annotation or class of annotations using the
-format below.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each annotation type.) -->
 **Annotation Type** | **Number**
 --- | ---
-Annotations (or Class) | 12345 (20%)
-Annotations (or Class) | 12345 (20%)
-Annotations (or Class) | 12345 (20%)
-Annotations (or Class) | 12345 (20%)
-Annotations (or Class) | 12345 (20%)
+Positive reviews | 25,000 (50%)
+Negative reviews | 25,000 (50%)
 
-**Above:** Provide a caption for the above table or visualization.
+**Above:** The released benchmark is class balanced.
 
-**Additional Notes:** Add here
+**Additional Notes:** Exact train/test class counts are not separately enumerated, but the dataset is evenly divided and class-balanced overall.
 
 #### Annotation Task(s)
-<!-- scope: microscope -->
-<!-- info: Summarize each task type associated
-with annotations in the dataset.
+**(Sentiment labeling)**
 
-Use additional notes to capture any
-other relevant information or
-considerations.
+**Task description:** Assign document-level sentiment polarity to movie reviews using user-provided IMDB ratings.
 
-(Usage Note: Duplicate and complete
-the following for each task type.) -->
-**(Task Type)**
+**Task instructions:** Negative if score ≤ 4/10; positive if score ≥ 7/10; exclude neutral reviews.
 
-**Task description:** Summarize here. Include links if available.
+**Methods used:** Rule-based thresholding of original ratings.
 
-**Task instructions:** Summarize here. Include links if available.
+**Inter-rater adjudication policy:** Not specified in the paper.
 
-**Methods used:** Summarize here. Include links if available.
+**Golden questions:** Not specified in the paper.
 
-**Inter-rater adjudication policy:** Summarize here. Include links if
-available.
-
-**Golden questions:** Summarize here. Include links if available.
-
-**Additional notes:** Add here
+**Additional notes:** None.
 
 ### Human Annotators
-<!-- info: Fill this section if human annotators were used. -->
 #### Annotator Description(s)
-<!-- scope: periscope -->
-<!-- info: Provide a brief description for each annotator
-pool performing the human annotation task.
+**(Rating source users)**
 
-Use additional notes to capture any other
-relevant information or considerations.
+**Task type:** Original rating of movie reviews on IMDB
 
-(Usage Note: Duplicate and complete the
-following for each annotation type.) -->
-**(Annotation Type)**
+**Number of unique annotators:** Not specified in the paper
 
-**Task type:** Summarize here. Include links if available.
+**Expertise of annotators:** Non-expert public users / reviewers
 
-**Number of unique annotators:** Summarize here. Include links if available.
+**Description of annotators:** IMDB reviewers who wrote the source reviews and supplied the underlying scores
 
-**Expertise of annotators:** Summarize here. Include links if available.
+**Language distribution of annotators:** Not specified in the paper
 
-**Description of annotators:** Summarize here. Include links if available.
+**Geographic distribution of annotators:** Not specified in the paper
 
-**Language distribution of annotators:** Summarize here. Include links if
-available.
+**Summary of annotation instructions:** Not specified in the paper
 
-**Geographic distribution of annotators:** Summarize here. Include links if
-available.
+**Summary of gold questions:** Not specified in the paper
 
-**Summary of annotation instructions:** Summarize here. Include links if
-available.
+**Annotation platforms:** IMDB
 
-**Summary of gold questions:** Summarize here. Include links if available.
-
-**Annotation platforms:** Summarize here. Include links if available.
-
-**Additional Notes:** Add here
+**Additional Notes:** The dataset creators derive labels from these ratings; they do not report a separate manual annotation campaign.
 
 #### Annotator Task(s)
-<!-- scope: microscope -->
-<!-- info: Provide a brief description for each
-annotator pool performing the human
-annotation task.
+**(User-provided rating task)**
 
-Use additional notes to capture any
-other relevant information or
-considerations.
+**Task description:** Submit a movie review and corresponding score on IMDB.
 
-(Usage Note: Duplicate and complete
-the following for each annotation
-type.) -->
-**(Task Type)**
+**Task instructions:** Not specified in the paper
 
-**Task description:** Summarize here. Include links if available.
+**Compensation:** Not specified in the paper
 
-**Task instructions:** Summarize here. Include links if available.
+**Quality assurance:** Not specified in the paper
 
-**Methods used:** Summarize here. Include links if available.
-
-**Inter-rater adjudication policy:** Summarize here. Include links if
-available.
-
-**Golden questions:** Summarize here. Include links if available.
-
-**Additional notes:** Add here
-
-#### Language(s)
-<!-- scope: telescope -->
-<!-- info: Provide annotator distributions for
-each annotation type.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and
-complete the following for each
-annotation type.) -->
-**(Annotation Type)**
-
-- Language [Percentage %]
-- Language [Percentage %]
-- Language [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Location(s)
-<!-- scope: periscope -->
-<!-- info: Provide annotator distributions for each
-annotation type.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each annotation type.) -->
-**(Annotation Type)**
-
-- Location [Percentage %]
-- Location [Percentage %]
-- Location [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Gender(s)
-<!-- scope: microscope -->
-<!-- info: Provide annotator distributions for
-each annotation type.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete
-the following for each annotation
-type.) -->
-**(Annotation Type)**
-
-- Gender [Percentage %]
-- Gender [Percentage %]
-- Gender [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-## Validation Types
-<!-- info: Fill this section if the data in the dataset was validated during
-or after the creation of your dataset. -->
-#### Method(s)
-<!-- scope: telescope -->
-<!-- info: Select **all applicable**: -->
-- Data Type Validation
-- Range and Constraint Validation
-- Code/cross-reference Validation
-- Structured Validation
-- Consistency Validation
-- Not Validated
-- Others (Please Specify)
-
-#### Breakdown(s)
-<!-- scope: periscope -->
-<!-- info: Provide a description of the fields and data
-points that were validated.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each validator type.) -->
-**(Validation Type)**
-
-**Number of Data Points Validated:** 12345
-
-**Fields Validated**
-Field | Count (if available)
---- | ---
-Field | 123456
-Field | 123456
-Field | 123456
-
-**Above:** Provide a caption for the above table or visualization.
-
-#### Description(s)
-<!-- scope: microscope -->
-<!-- info: Provide a description of the methods used to
-validate the dataset.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each validator type.) -->
-**(Validation Type)**
-
-**Method:** Describe the validation method here. Include links where
-necessary.
-
-**Platforms, tools, or libraries:**
-
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-- Platform, tool, or library: Write description here
-
-**Validation Results:** Provide results, outcomes, and actions taken because
-of the validation. Include visualizations where available.
-
-**Additional Notes:** Add here
-
-### Description of Human Validators
-<!-- info: Fill this section if the dataset was validated using human
-validators -->
-#### Characteristic(s)
-<!-- scope: periscope -->
-<!-- info: Provide characteristics of the validator
-pool(s). Use additional notes to capture any
-other relevant information or considerations. -->
-**(Validation Type)**
-- Unique validators: 12345
-- Number of examples per validator: 123456
-- Average cost/task/validator: $$$
-- Training provided: Y/N
-- Expertise required: Y/N
-
-#### Description(s)
-<!-- scope: microscope -->
-<!-- info: Provide a brief description of the validator
-pool(s). Use additional notes to capture any
-other relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each validator type.) -->
-**(Validation Type)**
-
-**Validator description:** Summarize here. Include links if available.
-
-**Training provided:** Summarize here. Include links if available.
-
-**Validator selection criteria:** Summarize here. Include links if available.
-
-**Training provided:** Summarize here. Include links if available.
-
-**Additional Notes:** Add here
-
-#### Language(s)
-<!-- scope: telescope -->
-<!-- info: Provide validator distributions.
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each annotation type.)-->
-**(Validation Type)**
-
-- Language [Percentage %]
-- Language [Percentage %]
-- Language [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Location(s)
-<!-- scope: periscope -->
-<!-- info: Provide validator distributions.
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each annotation type.)-->
-**(Validation Type)**
-
-- Location [Percentage %]
-- Location [Percentage %]
-- Location [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Gender(s)
-<!-- scope: microscope -->
-<!-- info: Provide validator distributions.
-Use additional notes to capture any other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the following for each annotation type.)-->
-**(Validation Type)**
-
-- Gender [Percentage %]
-- Gender [Percentage %]
-- Gender [Percentage %]
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-## Sampling Methods
-<!-- info: Fill out the following block if your dataset employs any sampling
-methods. -->
-#### Method(s) Used
-<!-- scope: telescope -->
-<!-- info: Select **all applicable** methods used in the creation of this
-dataset: -->
-- Cluster Sampling
-- Haphazard Sampling
-- Multi-stage Sampling
-- Random Sampling
-- Retrospective Sampling
-- Stratified Sampling
-- Systematic Sampling
-- Weighted Sampling
-- Unknown
-- Unsampled
-- Others (Please specify)
-
-#### Characteristic(s)
-<!-- scope: periscope -->
-<!-- info: Provide characteristics of each sampling
-method used.
-
-Use additional notes to capture any other
-relevant information or considerations.
-
-(Usage Note: Duplicate and complete the
-following for each sampling method
-used.) -->
-**(Sampling Type)** | **Number**
---- | ---
-Upstream Source | Write here
-Total data sampled | 123m
-Sample size | 123
-Threshold applied | 123k units at property
-Sampling rate | 123
-Sample mean | 123
-Sample std. dev | 123
-Sampling distribution | 123
-Sampling variation | 123
-Sample statistic | 123
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Sampling Criteria
-<!-- scope: microscope -->
-<!-- info: Describe the criteria used to sample data from
-upstream sources.
-
-Use additional notes to capture any other
-relevant information or considerations. -->
-- **Sampling method:** Summarize here. Include links where applicable.
-- **Sampling method:** Summarize here. Include links where applicable.
-- **Sampling method:** Summarize here. Include links where applicable.
-
-## Known Applications & Benchmarks
-<!-- info: Fill out the following section if your dataset was primarily
-created for use in AI or ML system(s) -->
-#### ML Application(s)
-<!-- scope: telescope -->
-<!-- info: Provide a list of key ML tasks
-that the dataset has been
-used for.
-
-Usage Note: Use comma-separated keywords. -->
-*For example: Classification, Regression, Object Detection*
-
-#### Evaluation Result(s)
-<!-- scope: periscope -->
-<!-- info: Provide the evaluation results from
-models that this dataset has been used
-in.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the
-following for each model.) -->
-**(Model Name)**
-
-**Model Card:** [Link to full model card]
-
-Evaluation Results
-
-- Accuracy: 123 (params)
-- Precision: 123 (params)
-- Recall: 123 (params)
-- Performance metric: 123 (params)
-
-**Above:** Provide a caption for the above table or visualization.
-
-**Additional Notes:** Add here
-
-#### Evaluation Process(es)
-<!-- scope: microscope -->
-<!-- info: Provide a description of the evaluation process for
-the model's overall performance or the
-determination of how the dataset contributes to
-the model's performance.
-
-Use additional notes to capture any other relevant
-information or considerations.
-
-(Usage Note: Duplicate and complete the following
-for each model and method used.) -->
-**(Model Name)**
-
-**[Method used]:** Summarize here. Include links where available.
-
-- **Process:** Summarize here. Include links, diagrams, visualizations, tables as relevant.
-- **Factors:** Summarize here. Include links, diagrams, visualizations, tables as relevant.
-- **Considerations:** Summarize here. Include links, diagrams, visualizations, tables as relevant.
-- **Results:** Summarize here. Include links, diagrams, visualizations, tables as relevant.
-
-**Additional Notes:** Add here
-
-#### Description(s) and Statistic(s)
-<!-- scope: periscope -->
-<!-- info: Provide a description of the model(s) and
-task(s) that this dataset has been used
-in.
-
-Use additional notes to capture any
-other relevant information or
-considerations.
-
-(Usage Note: Duplicate and complete the
-following for each model.) -->
-**(Model Name)**
-
-**Model Card:** Link to full model card
-
-**Model Description:** Summarize here. Include links where applicable.
-
-- Model Size: 123 (params)
-- Model Weights: 123 (params)
-- Model Layers 123 (params)
-- Latency: 123 (params)
-
-**Additional Notes:** Add here
-
-#### Expected Performance and Known Caveats
-<!-- scope: microscope -->
-<!-- info: Provide a description of the expected performance
-and known caveats of the models for this dataset.
-
-Use additional notes to capture any other relevant
-information or considerations.
-
-(Usage Note: Duplicate and complete the following
-for each model.) -->
-**(Model Name)**
-
-**Expected Performance:** Summarize here. Include links where available.
-
-**Known Caveats:** Summarize here. Include links, diagrams, visualizations, and
-tables as relevant.
-
-**Additioanl Notes:** Add here
-
-## Terms of Art
-### Concepts and Definitions referenced in this Data Card
-<!-- info: Use this space to include the expansions and definitions of any
-acronyms, concepts, or terms of art used across the Data Card.
-Use standard definitions where possible. Include the source of the definition
-where indicated. If you are using an interpretation,
-adaptation, or modification of the standard definition for the purposes of your
-Data Card or dataset, include your interpretation as well. -->
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-#### Term of Art
-Definition: Write here
-
-Source: Write here and share link
-
-Interpretation: Write here
-
-## Reflections on Data
-<!-- info: Use this space to include any additional information about the
-dataset that has not been captured by the Data Card. For example,
-does the dataset contain data that might be offensive, insulting, threatening,
-or might otherwise cause anxiety? If so, please contact the appropriate parties
-to mitigate any risks. -->
-### Title
-Write notes here.
-
-### Title
-Write notes here.
-
-### Title
-Write notes here.
+**Additional Notes:** None.
